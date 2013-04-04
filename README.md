@@ -5,7 +5,7 @@ Collect counter and elapsed time metrics for logging or other reporting.
 
 Part of the [Moar PHP Library][].
 
-[![Build Status][ci-status]][ci-home]
+[![Latest Build Status][ci-status]][ci-home]
 
 
 Installation
@@ -29,7 +29,7 @@ PSR-0 compatible autoloader.
 Run the tests
 -------------
 Tests are automatically performed by [Travis CI][]:
-[![Build Status][ci-status]][ci-home]
+[![Latest Build Status][ci-status]][ci-home]
 
 
     curl -sS https://getcomposer.org/installer | php
