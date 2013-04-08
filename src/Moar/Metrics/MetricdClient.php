@@ -157,10 +157,8 @@ class MetricdClient implements LoggerAwareInterface {
           'app' => $this->app,
         );
 
-      /* TODO: Port MDC context aware logger to Psr\Log
       // extend meta with logging MDC
-      $meta = array_merge($this->logger->getContext()->getContext(), $meta);
-      */
+      $meta = array_merge(\Moar\Log\MDC::defaultMDC()->getContext(), $meta);
 
       if (null !== $extraMeta && is_array($extraMeta)) {
         // extend meta with extra meta

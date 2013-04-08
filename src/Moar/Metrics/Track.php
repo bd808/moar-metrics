@@ -289,27 +289,23 @@ final class Track {
    * @return void
    */
   public static function log ($logger, $msg = '', $stop = true, $ctx = null) {
-    /* TODO: Port MDC context aware logger to Psr\Log
-    $mdc = $logger->getContext();
-
     if (is_array($ctx)) {
       // decorate log message with any tags provided
+      $mdc = \Moar\Log\MDC::defaultMDC();
       foreach ($ctx as $key => $val) {
         $mdc->put($key, $val);
       }
     }
-     */
 
     $logger->info($msg . json_encode(self::report($stop)));
 
-    /*
     if (is_array($ctx)) {
       // remove decorations
+      $mdc = \Moar\Log\MDC::defaultMDC();
       foreach ($ctx as $key => $val) {
         $mdc->remove($key);
       }
     }
-     */
   } //end log
 
   /**
